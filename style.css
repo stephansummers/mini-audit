@@ -1,0 +1,682 @@
+@font-face {
+    font-family: 'ModernDOS';
+    src: url('/fonts/modern_dos/ModernDOS8x14.ttf') format('truetype');
+}
+
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'ModernDOS', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+h1, p {
+    font-family: 'ModernDOS', sans-serif;
+}
+
+
+/* Burger Menu */
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 999;
+    width: 200px;
+    text-align: left; /* Align menu points to the left */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: left; /* Align menu points to the left */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: "ModernDOS", sans-serif;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #0DFF92; /* Change hover color to green */
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/images/hintergrund01.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+}
+
+.hero-content {
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+
+.hero-content h1 {
+    position: relative;
+    top: -25vh; /* Adjust this value to move the h1 higher */
+    text-align: center; /* Keep it centered horizontally */
+    margin: 0;
+    font-size: 4rem;
+}
+
+.additional-texts {
+    position: absolute;
+    top: 50%; /* Adjust this value to place the text below the heroText */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect horizontal and vertical centering */
+    width: 100%; /* Ensure it spans the full width of its parent container */
+    text-align: center; /* Center-align the text inside */
+}
+
+.additional-texts p {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50%; /* Align horizontally from the center */
+    transform: translateX(-50%); /* Offset by 50% to ensure it is centered */
+    width: 100%; /* Ensure it spans the full width */
+    text-align: center; /* Center the text content */
+    opacity: 1; /* Start with opacity 0 and control visibility via GSAP */
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+
+#db-logo {
+    width: 30vw; /* Adjust this size as necessary */
+    opacity: 1;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+#ctaButton {
+    position: absolute;
+    bottom: 20%; /* Position relative to the bottom of the hero */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 2;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'ModernDOS', Arial, sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    width: auto; /* Ensure the button width is only as wide as its content */
+    max-width: none; /* Remove any max-width that might be causing it to stretch */
+    text-align: center; /* Center the text within the button */
+}
+
+#ctaButton:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Zwischenbild */
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bw-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Make the image black and white */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure it is above the image */
+}
+
+/* Audit section */
+.audit-section {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+    font-family: 'WorkSans', sans-serif;
+}
+
+.audit-section h2 {
+    text-align: left;
+    font-size: 5rem;
+    font-family: 'ModernDOS', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.audit-section h3 {
+    font-size: 3rem;
+    text-align:left;
+    font-family: 'ModernDOS', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.audit-section p {
+    font-size: 1.5rem;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+.audit-section .question {
+    margin-bottom: 30px;
+}
+
+.audit-section p {
+    font-family: 'ModernDOS', sans-serif;
+    margin-bottom: 10px;
+}
+
+.audit-section .options label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.audit-section .next-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: 'ModernDOS', sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.audit-section .next-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.audit-section .cta-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'ModernDOS', Arial, sans-serif;
+    border-radius: 5px;
+    display: none; /* Hide initially */
+    transition: background-color 0.3s, color 0.3s;    
+}
+
+.slide .cta-button {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#cta1 {
+    background-color: #0DFF92;
+    color: black;
+}
+
+#cta2 {
+    background-color:yellow;
+    color: black;
+}
+
+#cta3 {
+    background-color: red;
+    color: white;
+}
+
+#cta3 > a {
+    color: white;
+}
+
+.summary-card {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.summary-card h4 {
+    margin-bottom: 10px; /* Ensure there's some space below the title */
+    font-size: 1.5rem;
+}
+    
+/* Container for the summary cards */
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts spacing between cards */
+    gap: 20px; /* Adds space between cards */
+}
+
+/* Styles for the summary cards */
+.summary-card {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-family: 'WorkSans', sans-serif;
+    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    min-width: 200px; /* Minimum width for each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover animation for summary cards */
+.summary-card:hover {
+    transform: translateY(-10px); /* Move up slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.summary-card:hover {
+    background-color: #fff; /* Change background color to green on hover */
+    color: black; /* Optional: change text color for better contrast */
+}
+
+/* Styles for the back button */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: 'ModernDOS', sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the back button */
+.back-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Radio button styles */
+.options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.options li {
+    color: #fff;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /*border-bottom: 1px solid #333;*/
+}
+
+.options li input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.options li label {
+    display: block;
+    font-weight: 300;
+    font-size: 1.35rem;
+    font-family: "ModernDOS", sans-serif;
+    padding-left: 40px; /* Space for the radio button */
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.options li:hover label {
+    color: #FFFFFF;
+}
+
+.options li .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    left: 0;
+    transition: border 0.25s linear;
+}
+
+.audit-section h5 {
+    display: none;
+}
+
+/* Change border color on hover */
+.options li:hover .check {
+    border: 5px solid #FFFFFF;
+}
+
+/* Inner circle */
+.options li .check::before {
+    content: '';
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: transparent; /* Ensure the background is transparent initially */
+    transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+    border: 5px solid #0DFF92;
+}
+
+input[type=radio]:checked ~ .check::before {
+    background: #0DFF92;
+}
+
+input[type=radio]:checked ~ label {
+    color: #0DFF92;
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'WorkSans', sans-serif;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide h2, .slide h3 {
+    font-family: 'ModernDOS', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'ModernDOS', Arial, sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+        
+/* Contact section styles */
+.contact-section {
+    height: 60vh;
+    background-color: black;
+    color: white;
+    padding: 60px 20px;
+}
+        
+.contact-section .row {
+    display: flex;
+    align-items: top;
+}
+        
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+        
+.contact-info {
+    text-align: left;
+    padding-left: 20px;
+}
+        
+.contact-section h2 {
+    font-family: 'ModernDOS', sans-serif;
+    color: white;
+    text-align: left;
+}
+        
+.contact-section p {
+    font-family: 'ModernDOS', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.contact-section a {
+    color: white;
+}
+
+.contact-section a:hover {
+    color:#0DFF92;
+}
+
+.slim-col {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.slim-col img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2000px;
+}
+
+.scaled-image {
+    max-width: 100%; /* Ensures the image doesn't exceed the column width */
+    width: 50%; /* Adjust this value as needed to scale down the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* White-Line Separator */
+.thin-white-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+/* Legal Section */
+.legal {
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.legal p {
+    margin: 0;
+    padding: 5px 0;
+    font-family: 'ModernDOS', sans-serif;
+    color: white;
+}
+
+.legal p>a {
+    color: white;
+}
+
+.legal p>a:hover {
+    color: #0DFF92; /* Changes the color to green on hover */
+}
+
+.egal p>a:visited {
+    color: white; /* Keeps the color white after visiting */
+}
+
+.legal p>a:active {
+    color: white; /* Keeps the color white when active */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    /* Adjust font size for CTA buttons on slide 5 */
+    #slide5 .col-md-6 #cta1, 
+    #slide5 .col-md-6 #cta2, 
+    #slide5 .col-md-6 #cta3 {
+        font-size: 1rem !important;
+    }
+
+    /* Adjust font size for summary cards on slide 5 */
+    .slider #slide5 .col-md-6 .summary-card {
+        font-size: 1rem !important;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .hero-content {
+        bottom: 18%;
+        padding: 1.5rem;
+        hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        bottom: 15%;
+        padding: 2rem;
+        hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .summary-card {
+        flex: 1 1 100%; /* One card per row on small screens */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-content {
+        bottom: 12%;
+        padding: 2.5rem;
+    }
+
+    .cta-button {
+        padding: 17px 35px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-content {
+        bottom: 10%;
+        padding: 3rem;
+    }
+
+    .cta-button {
+        padding: 20px 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .hero-content {
+        bottom: 8%;
+        padding: 3.5rem;
+    }
+
+    .cta-button {
+        padding: 25px 50px;
+        font-size: 1.7rem;
+    }
+}
