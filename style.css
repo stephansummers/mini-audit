@@ -27,8 +27,8 @@ h1, p {
 
 /* Logo Image */
 .logo {
-    width: 12vw; /* Adjust width relative to the viewport width */
-    max-width: 150px; /* Maximum width to prevent it from getting too large */
+    width: 30vw; /* Adjust width relative to the viewport width */
+    max-width: 200px; /* Maximum width to prevent it from getting too large */
     height: auto; /* Maintain aspect ratio */
 }
 
