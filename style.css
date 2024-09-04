@@ -17,6 +17,20 @@ h1, p {
     font-family: 'ModernDOS', sans-serif;
 }
 
+/* Logo Container */
+.logo-container {
+    position: absolute; /* Keeps the logo fixed in the top-left corner */
+    top: 4vh; /* Distance from the top of the screen */
+    left: 4vh; /* Distance from the left of the screen */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Logo Image */
+.logo {
+    width: 12vw; /* Adjust width relative to the viewport width */
+    max-width: 150px; /* Maximum width to prevent it from getting too large */
+    height: auto; /* Maintain aspect ratio */
+}
 
 /* Burger Menu */
 .burger-menu {
