@@ -576,13 +576,19 @@ button:hover {
 
 /* Responsive adjustments */
 @media (min-width: 360px) {
-    /* For summary cards */
+    /*Hero Content*/
+    .hero-content h1 {
+        font-size: 3rem; /* Make font smaller for readability on small screens */
+        padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
+    }
+    
     .additional-texts p {
         font-size: 1.5rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
-    
+
+    /* For summary cards */
     .summary-card p {
         font-size: 0.9rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -605,13 +611,19 @@ button:hover {
 }
 
 @media (min-width: 414px) {
-    /* For summary cards */
+    /*Hero Content*/
+    .hero-content h1 {
+        font-size: 3.2rem; /* Make font smaller for readability on small screens */
+        padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
+    }
+    
     .additional-texts p {
         font-size: 1.6rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
     
+    /* For summary cards */
     .summary-card p {
         font-size: 1.2rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -634,13 +646,19 @@ button:hover {
 }
 
 @media (min-width: 576px) {
-    /* For summary cards */
+    /*Hero Content*/
+    .hero-content h1 {
+        font-size: 3.4rem; /* Make font smaller for readability on small screens */
+        padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
+    }
+    
     .additional-texts p {
         font-size: 1.7rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
-    
+
+    /* For summary cards */
     .summary-card p {
         font-size: 1.3rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -663,13 +681,18 @@ button:hover {
 }
 
 @media (min-width: 768px) {
-    /* For summary cards */
+    .hero-content h1 {
+        font-size: 3.8rem; /* Make font smaller for readability on small screens */
+        padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
+    }
+    
     .additional-texts p {
         font-size: 1.8rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
-    
+
+    /* For summary cards */
     .summary-card p {
         font-size: 1.4rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
