@@ -574,12 +574,6 @@ button:hover {
     color: white; /* Keeps the color white when active */
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Responsive adjustments */
 @media (max-width: 375px) {
     /* Adjust font size for CTA buttons on slide 5 */
