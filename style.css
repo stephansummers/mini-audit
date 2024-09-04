@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ModernDOS';
-    src: url('https://stephansummers.github.io/mini-audit/fonts/modern_dos/ModernDOS8x14.ttf') format('truetype');
+    src: url('/fonts/modern_dos/ModernDOS8x14.ttf') format('truetype');
 }
 
 /* Base styles */
@@ -90,7 +90,7 @@ h1, p {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background-image: url('https://stephansummers.github.io/mini-audit/images/hintergrund01.jpg');
+    background-image: url('/images/hintergrund01.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
@@ -117,7 +117,7 @@ h1, p {
 
 .additional-texts {
     position: absolute;
-    top: 50%; /* Adjust this value to place the text below the heroText */
+    top: 40%; /* Adjust this value to place the text below the heroText */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Perfect horizontal and vertical centering */
     width: 100%; /* Ensure it spans the full width of its parent container */
@@ -229,15 +229,12 @@ h1, p {
     font-size: 1.5rem;
     hyphens: auto;
     word-wrap: break-word;
+    font-family: 'ModernDOS', sans-serif;
+    margin-bottom: 10px;
 }
 
 .audit-section .question {
     margin-bottom: 30px;
-}
-
-.audit-section p {
-    font-family: 'ModernDOS', sans-serif;
-    margin-bottom: 10px;
 }
 
 .audit-section .options label {
@@ -301,20 +298,6 @@ h1, p {
     color: white;
     text-decoration: underline;
 }
-
-.summary-card {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: #000;
-    color: #fff;
-}
-
-.summary-card h4 {
-    margin-bottom: 10px; /* Ensure there's some space below the title */
-    font-size: 1.5rem;
-}
     
 /* Container for the summary cards */
 #answers {
@@ -326,25 +309,26 @@ h1, p {
 
 /* Styles for the summary cards */
 .summary-card {
+    margin-bottom: 10px;
+    border-radius: 10px;
     background-color: black;
     border: 2px solid white;
-    border-radius: 10px;
     padding: 20px;
     color: white;
-    font-family: 'WorkSans', sans-serif;
     flex: 1 1 calc(50% - 20px); /* Two cards per row */
     box-sizing: border-box; /* Ensures padding and border are included in the width */
-    min-width: 200px; /* Minimum width for each card */
+    min-width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.summary-card p {
+    font-size: 1.5rem;
 }
 
 /* Hover animation for summary cards */
 .summary-card:hover {
-    transform: translateY(-10px); /* Move up slightly */
+    transform: translateY(-5px); /* Move up slightly */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-.summary-card:hover {
     background-color: #fff; /* Change background color to green on hover */
     color: black; /* Optional: change text color for better contrast */
 }
@@ -502,7 +486,7 @@ button:hover {
         
 .contact-section .row {
     display: flex;
-    align-items: top;
+    align-items: flex-start;
 }
         
 .contact-image img {
@@ -589,102 +573,96 @@ button:hover {
     color: white; /* Keeps the color white when active */
 }
 
+
 /* Responsive adjustments */
-@media (max-width: 375px) {
-    /* Adjust font size for CTA buttons on slide 5 */
-    #slide5 .col-md-6 #cta1, 
-    #slide5 .col-md-6 #cta2, 
-    #slide5 .col-md-6 #cta3 {
-        font-size: 1rem !important;
+@media (min-width: 360px) {
+    /* For summary cards */
+    .summary-card p {
+        font-size: 0.9rem; /* Make font smaller for readability on small screens */
+        padding: 0vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
     }
 
-    /* Adjust font size for summary cards on slide 5 */
-    .slider #slide5 .col-md-6 .summary-card {
-        font-size: 1rem !important;
+    .summary-card {
+        flex: 1 1 100% !important;  /* Stack the cards vertically */
+        margin-bottom: 15px !important;
+        text-align: left; /* Make text left-aligned for better readability on small screens */
+    }
+
+    /* CTA buttons */
+    #cta1, #cta2, #cta3 {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+        line-height: 1.4;  /* Better line spacing */
+        margin-bottom: 6vh;
     }
 }
 
-
-@media (min-width: 576px) {
-    .hero-content {
-        bottom: 18%;
-        padding: 1.5rem;
-        hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
+@media (min-width: 414px) {
+    /* For summary cards */
+    .summary-card p {
+        font-size: 1.2rem; /* Make font smaller for readability on small screens */
+        padding: 0vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
     }
 
-    .cta-button {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
+    .summary-card {
+        flex: 1 1 100% !important;  /* Stack the cards vertically */
+        margin-bottom: 15px !important;
+        text-align: left; /* Make text left-aligned for better readability on small screens */
+    }
+
+    /* CTA buttons */
+    #cta1, #cta2, #cta3 {
+        font-size: 1.2rem; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+        line-height: 1.4;  /* Better line spacing */
+        margin-bottom: 6vh;
+    }
+}
+
+@media (min-width: 576px) {
+    /* For summary cards */
+    .summary-card p {
+        font-size: 1.3rem; /* Make font smaller for readability on small screens */
+        padding: 0vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
+    }
+
+    .summary-card {
+        flex: 1 1 100% !important;  /* Stack the cards vertically */
+        margin-bottom: 15px !important;
+        text-align: left; /* Make text left-aligned for better readability on small screens */
+    }
+
+    /* CTA buttons */
+    #cta1, #cta2, #cta3 {
+        font-size: 1.3rem; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+        line-height: 1.4;  /* Better line spacing */
+        margin-bottom: 6vh;
     }
 }
 
 @media (min-width: 768px) {
-    .hero-content {
-        bottom: 15%;
-        padding: 2rem;
-        hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-    }
-
-    .cta-button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-    }
-
-    .cta-button {
-        width: 100%;
-        text-align: center;
+    /* For summary cards */
+    .summary-card p {
+        font-size: 1.4rem; /* Make font smaller for readability on small screens */
+        padding: 0vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
     }
 
     .summary-card {
-        flex: 1 1 100%; /* One card per row on small screens */
-        hyphens: auto;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-    }
-}
-
-@media (min-width: 992px) {
-    .hero-content {
-        bottom: 12%;
-        padding: 2.5rem;
+        flex: 1 1 100% !important;  /* Stack the cards vertically */
+        margin-bottom: 15px !important;
+        text-align: left; /* Make text left-aligned for better readability on small screens */
     }
 
-    .cta-button {
-        padding: 17px 35px;
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .hero-content {
-        bottom: 10%;
-        padding: 3rem;
-    }
-
-    .cta-button {
-        padding: 20px 40px;
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1600px) {
-    .hero-content {
-        bottom: 8%;
-        padding: 3.5rem;
-    }
-
-    .cta-button {
-        padding: 25px 50px;
-        font-size: 1.7rem;
+    /* CTA buttons */
+    #cta1, #cta2, #cta3 {
+        font-size: 1.4rem; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+        line-height: 1.4;  /* Better line spacing */
+        margin-bottom: 6vh;
     }
 }
