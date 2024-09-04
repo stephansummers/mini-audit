@@ -285,6 +285,7 @@ h1, p {
 
 #cta3 > a {
     color: white;
+    text-decoration: underline;
 }
 
 .summary-card {
