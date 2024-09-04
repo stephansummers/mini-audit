@@ -578,7 +578,7 @@ button:hover {
 @media (min-width: 360px) {
     /* For summary cards */
     .additional-texts p {
-        font-size: 0.9rem; /* Make font smaller for readability on small screens */
+        font-size: 1.5rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
@@ -607,7 +607,7 @@ button:hover {
 @media (min-width: 414px) {
     /* For summary cards */
     .additional-texts p {
-        font-size: 1.2rem; /* Make font smaller for readability on small screens */
+        font-size: 1.6rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
@@ -636,7 +636,7 @@ button:hover {
 @media (min-width: 576px) {
     /* For summary cards */
     .additional-texts p {
-        font-size: 1.3rem; /* Make font smaller for readability on small screens */
+        font-size: 1.7rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
@@ -665,7 +665,7 @@ button:hover {
 @media (min-width: 768px) {
     /* For summary cards */
     .additional-texts p {
-        font-size: 1.4rem; /* Make font smaller for readability on small screens */
+        font-size: 1.8rem; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
