@@ -106,9 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSlide.style.display = 'none';
             document.getElementById(`slide${slideNumber + 1}`).style.display = 'block';
         } else {
-            displayResults();
-        }
+        // Reached the final slide
+        displayResults();
+        hideAuditMessage(); // Hide the message when showing slide 5
     }
+}
+
+function hideAuditMessage() {
+    // Find the audit section paragraph and hide it
+    const auditMessage = document.querySelector('.audit-section p');
+    if (auditMessage) {
+        auditMessage.style.display = 'none'; // Hide the paragraph when reaching the final slide
+    }
+}
 
     function displayResults() {
         // Hide the "Kurz-Audit" title
