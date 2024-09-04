@@ -106,19 +106,37 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSlide.style.display = 'none';
             document.getElementById(`slide${slideNumber + 1}`).style.display = 'block';
         } else {
-        // Reached the final slide
-        displayResults();
-        hideAuditMessage(); // Hide the message when showing slide 5
+            // Reached the final slide
+            displayResults();
+            hideAuditMessage(); // Hide the message when showing slide 5
+        }
     }
-}
 
-function hideAuditMessage() {
-    // Find the audit section paragraph and hide it
-    const auditMessage = document.querySelector('.audit-section p');
-    if (auditMessage) {
-        auditMessage.style.display = 'none'; // Hide the paragraph when reaching the final slide
+    function prevSlide(slideNumber) {
+        // Get the current slide and the previous slide elements
+        const currentSlide = document.getElementById(`slide${slideNumber}`);
+        const previousSlide = document.getElementById(`slide${slideNumber - 1}`);
+    
+        // Ensure we don't go before the first slide
+        if (slideNumber > 1) {
+            // Hide the current slide
+            currentSlide.style.display = 'none';
+    
+            // Show the previous slide
+            previousSlide.style.display = 'block';
+        }
     }
-}
+
+    // Make prevSlide available globally
+    window.prevSlide = prevSlide;
+    
+    function hideAuditMessage() {
+        // Find the audit section paragraph and hide it
+        const auditMessage = document.querySelector('.audit-section p');
+        if (auditMessage) {
+            auditMessage.style.display = 'none'; // Hide the paragraph when reaching the final slide
+        }
+    }
 
     function displayResults() {
         // Hide the "Kurz-Audit" title
