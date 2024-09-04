@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ModernDOS';
-    src: url('https://stephansummers.github.io/mini-audit/fonts/modern_dos/ModernDOS8x14.ttf') format('truetype');
+    src: url('/fonts/modern_dos/ModernDOS8x14.ttf') format('truetype');
 }
 
 /* Base styles */
@@ -90,7 +90,7 @@ h1, p {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background-image: url('https:/stephansummers.github.io/mini-audit/images/hintergrund01.jpg');
+    background-image: url('/images/hintergrund01.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
@@ -577,6 +577,12 @@ button:hover {
 /* Responsive adjustments */
 @media (min-width: 360px) {
     /* For summary cards */
+    .additional-texts p {
+        font-size: 0.9rem; /* Make font smaller for readability on small screens */
+        padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
+    }
+    
     .summary-card p {
         font-size: 0.9rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -600,6 +606,12 @@ button:hover {
 
 @media (min-width: 414px) {
     /* For summary cards */
+    .additional-texts p {
+        font-size: 1.2rem; /* Make font smaller for readability on small screens */
+        padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
+    }
+    
     .summary-card p {
         font-size: 1.2rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -623,6 +635,12 @@ button:hover {
 
 @media (min-width: 576px) {
     /* For summary cards */
+    .additional-texts p {
+        font-size: 1.3rem; /* Make font smaller for readability on small screens */
+        padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
+    }
+    
     .summary-card p {
         font-size: 1.3rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
@@ -646,6 +664,12 @@ button:hover {
 
 @media (min-width: 768px) {
     /* For summary cards */
+    .additional-texts p {
+        font-size: 1.4rem; /* Make font smaller for readability on small screens */
+        padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
+        line-height: 1.4;  /* Increase line spacing for better readability */
+    }
+    
     .summary-card p {
         font-size: 1.4rem; /* Make font smaller for readability on small screens */
         padding: 0vh;     /* Adjust padding to reduce space usage */
