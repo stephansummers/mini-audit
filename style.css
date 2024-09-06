@@ -625,6 +625,11 @@ button:hover {
         font-size: 3.2rem; /* Make font smaller for readability on small screens */
         padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
     }
+
+    #db-logo {
+            width: 50vw;
+            max-width: none;
+        }
     
     #additionalText1, #additionalText2, #additionalText3, #additionalText4, #additionalText5, #additionalText6, #additionalText7 {
         font-size: 1.6rem;
@@ -667,6 +672,11 @@ button:hover {
         line-height: 1.4;
     }
 
+    #db-logo {
+        width: 45vw;
+        max-width: none;
+    }
+    
     /* For summary cards */
     .summary-card p {
         font-size: 1.3rem; /* Make font smaller for readability on small screens */
@@ -701,6 +711,11 @@ button:hover {
         line-height: 1.4;
     }
 
+    #db-logo {
+        width: 40vw;
+        max-width: none;
+    }
+    
     /* For summary cards */
     .summary-card p {
         font-size: 1.4rem; /* Make font smaller for readability on small screens */
