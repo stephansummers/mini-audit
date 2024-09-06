@@ -133,7 +133,7 @@ h1, p {
     width: 100%; /* Ensure it spans the full width */
     text-align: center; /* Center the text content */
     opacity: 1; /* Start with opacity 0 and control visibility via GSAP */
-    font-size: 2rem;
+    font-size: 2.5rem !important;
     word-wrap: break-word;
 }
 
