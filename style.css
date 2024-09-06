@@ -583,7 +583,7 @@ button:hover {
     }
     
     .additional-texts p {
-        font-size: 1.5rem; /* Make font smaller for readability on small screens */
+        font-size: 1.5rem !important; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
@@ -613,7 +613,7 @@ button:hover {
 @media (min-width: 414px) {
     /*Hero Content*/
     .hero-content h1 {
-        font-size: 3.2rem; /* Make font smaller for readability on small screens */
+        font-size: 3.2rem !important; /* Make font smaller for readability on small screens */
         padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
     }
     
@@ -648,7 +648,7 @@ button:hover {
 @media (min-width: 576px) {
     /*Hero Content*/
     .hero-content h1 {
-        font-size: 3.4rem; /* Make font smaller for readability on small screens */
+        font-size: 3.4rem !important; /* Make font smaller for readability on small screens */
         padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
     }
     
@@ -687,7 +687,7 @@ button:hover {
     }
     
     .additional-texts p {
-        font-size: 1.8rem; /* Make font smaller for readability on small screens */
+        font-size: 1.8rem !important; /* Make font smaller for readability on small screens */
         padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
         line-height: 1.4;  /* Increase line spacing for better readability */
     }
