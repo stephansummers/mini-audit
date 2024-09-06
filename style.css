@@ -298,6 +298,16 @@ h1, p {
     color: white;
 }
 
+#cta1 > a {
+    color: black;
+    text-decoration: underline;
+}
+
+#cta2 > a {
+    color: black;
+    text-decoration: underline;
+}
+
 #cta3 > a {
     color: white;
     text-decoration: underline;
