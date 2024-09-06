@@ -106,7 +106,6 @@ h1, p {
     text-align: center;
 }
 
-
 .hero-content h1 {
     position: relative;
     top: -25vh; /* Adjust this value to move the h1 higher */
@@ -585,10 +584,16 @@ button:hover {
         padding: 0vh 2vh 0vh 2vh;     /* Adjust padding to reduce space usage */
     }
     
-    .additional-texts p {
-        font-size: 1.5rem !important; /* Make font smaller for readability on small screens */
-        padding: 2vh 2vh 2vh 2vh;     /* Adjust padding to reduce space usage */
-        line-height: 1.4;  /* Increase line spacing for better readability */
+    /*.additional-texts p {
+        font-size: 1.5rem !important;
+        padding: 2vh 2vh 2vh 2vh;
+        line-height: 1.4; 
+    }*/
+
+    #additionalText1, #additionalText2, #additionalText3, #additionalText4, #additionalText5, #additionalText6, #additionalText7 {
+        font-size: 1.5rem;
+        padding: 2vh 2vh 2vh 2vh;
+        line-height: 1.4;
     }
 
     /* For summary cards */
